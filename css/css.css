@@ -1,0 +1,82 @@
+:root {
+  /* ## Colors */
+  /* ### Primary */
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+  /* ### Neutral */
+  --Dark-gray: hsl(0, 0%, 59%);
+}
+* {
+  box-sizing: border-box;
+  font-family: "Kumbh Sans";
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: var(--Dark-cyan);
+  background-image: url(../images/bg-pattern-bottom.svg);
+}
+main section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main section .container .card {
+  width: 340px;
+  border-radius: 15px;
+  background-color: white;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+main section .container .card::before {
+  content: "";
+  position: absolute;
+  background-image: url(../images/image-victor.jpg);
+  background-size: cover;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 5px solid white;
+  left: calc(50%);
+  bottom: calc(50% - 5px);
+  transform: translateX(-50%);
+}
+main section .container .card img {
+  padding: 0px 0px 50px 0px;
+}
+main section .container .card h1 {
+  color: var(--Very-dark-desaturated-blue);
+  font-size: 18px;
+  margin: 20px 0px 15px 0px;
+}
+
+main section .container .card h2,
+main section .container .card span {
+  color: var(--Dark-grayish-blue);
+  font-size: 15px;
+  font-weight: 400;
+}
+main section .container .card .social-info {
+  display: flex;
+  justify-content: space-around;
+  margin: 25px 0px;
+  border-top: 1px solid hsl(0, 0%, 59%, 0.5);
+}
+
+main section .container .card .social-info h4,
+main section .container .card .social-info h5,
+main section .container .card .social-info h3 {
+  color: var(--Very-dark-desaturated-blue);
+  font-size: 18px;
+  margin: 25px 0px 0px 0px;
+}
+
+main section .container .card .social-info p {
+  color: var(--Dark-grayish-blue);
+  font-size: 11px;
+  font-weight: 400;
+}
